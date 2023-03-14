@@ -7,4 +7,3 @@ In the first milestone I learned about structs, variables, foreach loops, system
 I have implemented these concepts to create a static list of 4 grocery items with a title and some ticked and some not ticked. 
 
 First milestone video link
-
