@@ -11,7 +11,7 @@ import XCTest
 final class AssignmentOneTests: XCTestCase {
 
     func testExample() throws {
-        var ListRowView = ListRowView(item: ["Milk","checkmark.circle"])
+        let ListRowView = ListRowView(item: ["Milk","checkmark.circle"])
         XCTAssertEqual(ListRowView.item[0], "Milk")
         XCTAssertEqual(ListRowView.item[1], "checkmark.circle")
     }
