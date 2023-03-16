@@ -14,6 +14,7 @@
 		CFA9E4F529BFE2360040CFBA /* AssignmentOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9E4F429BFE2360040CFBA /* AssignmentOneTests.swift */; };
 		CFA9E4FF29BFE2360040CFBA /* AssignmentOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9E4FE29BFE2360040CFBA /* AssignmentOneUITests.swift */; };
 		CFA9E50129BFE2360040CFBA /* AssignmentOneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9E50029BFE2360040CFBA /* AssignmentOneUITestsLaunchTests.swift */; };
+		CFC07F3429C2B42100432EC7 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = CFC07F3329C2B42100432EC7 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CFA9E4FA29BFE2360040CFBA /* AssignmentOneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentOneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA9E4FE29BFE2360040CFBA /* AssignmentOneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneUITests.swift; sourceTree = "<group>"; };
 		CFA9E50029BFE2360040CFBA /* AssignmentOneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CFC07F3329C2B42100432EC7 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = ../readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		CFA9E4D729BFE2350040CFBA = {
 			isa = PBXGroup;
 			children = (
+				CFC07F3329C2B42100432EC7 /* readme.md */,
 				CFA9E4E229BFE2350040CFBA /* AssignmentOne */,
 				CFA9E4F329BFE2360040CFBA /* AssignmentOneTests */,
 				CFA9E4FD29BFE2360040CFBA /* AssignmentOneUITests */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA9E4EB29BFE2360040CFBA /* Preview Assets.xcassets in Resources */,
+				CFC07F3429C2B42100432EC7 /* readme.md in Resources */,
 				CFA9E4E829BFE2360040CFBA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
