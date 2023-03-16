@@ -32,7 +32,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
 struct ListRowView: View {
     var item: [String]
     var body: some View {
