@@ -16,10 +16,12 @@ struct ContentView: View {
         NavigationView{
             List {
                 ForEach(tasks,id:\.self) { task in
-                    ListRowView(item: task)
+                    NavigationLink(destination: ListRowView(item: task)){
+                        ListRowView(item: task)
+                    }
                 }
             }
-            .navigationTitle("Groceries")
+            .navigationTitle("Checklists")
             Spacer()
         }
         .padding()
