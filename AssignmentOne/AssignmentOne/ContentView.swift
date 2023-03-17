@@ -33,11 +33,16 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ListRowView: View {
-    var item: [String]
+    @State var item: [String]
     var body: some View {
         HStack{
             Text(item[0])
-            Image(systemName: item[1])
+            Image(systemName: item[1])}.onTapGesture {
+                if(item[1]==""){
+                    item[1]="checkmark.circle"} else {
+                        item[1]=""
+                }
         }
     }
 }
+
