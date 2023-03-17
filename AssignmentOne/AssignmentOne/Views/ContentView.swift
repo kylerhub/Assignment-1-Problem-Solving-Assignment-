@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView{
             List {
                 ForEach(tasks,id:\.self) { task in
-                    NavigationLink(destination: ListRowView(item: task)){
+                    NavigationLink(destination: ListDetailView(item:task)){
                         ListRowView(item: task)
                     }
                 }

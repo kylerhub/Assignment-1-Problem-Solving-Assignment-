@@ -13,11 +13,6 @@ struct ListRowView: View {
     var body: some View {
         HStack{
             Text(item[0])
-            Image(systemName: item[1])}.onTapGesture {
-                if(item[1]==""){
-                    item[1]="checkmark.circle"} else {
-                        item[1]=""
-                }
         }
     }
 }

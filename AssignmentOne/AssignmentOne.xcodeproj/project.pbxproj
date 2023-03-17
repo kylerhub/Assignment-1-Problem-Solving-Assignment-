@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF88F97C29C4423200F921F4 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88F97B29C4423200F921F4 /* ListRowView.swift */; };
+		CF88F97F29C447AA00F921F4 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88F97E29C447AA00F921F4 /* ListDetailView.swift */; };
 		CFAE68DF29C2D79E008A4C95 /* AssignmentOneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE68DE29C2D79E008A4C95 /* AssignmentOneApp.swift */; };
 		CFAE68E129C2D79E008A4C95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE68E029C2D79E008A4C95 /* ContentView.swift */; };
 		CFAE68E329C2D79F008A4C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAE68E229C2D79F008A4C95 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		CF88F97B29C4423200F921F4 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		CF88F97E29C447AA00F921F4 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 		CFAE68DB29C2D79E008A4C95 /* AssignmentOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAE68DE29C2D79E008A4C95 /* AssignmentOneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneApp.swift; sourceTree = "<group>"; };
 		CFAE68E029C2D79E008A4C95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				CFAE68E029C2D79E008A4C95 /* ContentView.swift */,
 				CF88F97B29C4423200F921F4 /* ListRowView.swift */,
+				CF88F97E29C447AA00F921F4 /* ListDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAE68E129C2D79E008A4C95 /* ContentView.swift in Sources */,
+				CF88F97F29C447AA00F921F4 /* ListDetailView.swift in Sources */,
 				CFAE68DF29C2D79E008A4C95 /* AssignmentOneApp.swift in Sources */,
 				CF88F97C29C4423200F921F4 /* ListRowView.swift in Sources */,
 			);
