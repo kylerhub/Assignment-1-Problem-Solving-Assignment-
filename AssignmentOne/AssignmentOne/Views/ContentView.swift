@@ -7,24 +7,31 @@
 import SwiftUI
 
 var tasks = [["Milk","checkmark.circle"],
-             ["Sugar",""],
-             ["Bread",""],
-             ["Cheese","checkmark.circle"]]
+                    ["Sugar",""],
+                    ["Bread",""],
+                    ["Cheese","checkmark.circle"]];
+
+var checklists = [["Checklist 1"],
+                  ["Checklist 2"]]
+
 struct ContentView: View {
+
     var body: some View {
         
         NavigationView{
-            List {
-                ForEach(tasks,id:\.self) { task in
-                    NavigationLink(destination: ListDetailView(item:task)){
-                        ListRowView(item: task)
+            VStack{
+                List {
+                    ForEach(tasks,id:\.self) {task in
+                        NavigationLink(destination: ListDetailView(item: task)){
+                            ListRowView(item: task)
+                        }
                     }
                 }
+                .navigationTitle("Checklists")
+                Spacer()
             }
-            .navigationTitle("Checklists")
-            Spacer()
+            .padding()
         }
-        .padding()
     }
 }
 
