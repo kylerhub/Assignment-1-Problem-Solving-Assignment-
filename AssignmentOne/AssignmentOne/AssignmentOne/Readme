@@ -1,9 +1,0 @@
-Assignment 1
-
-Second Milestone
-
-In the second milestone I learned about datamodels, navigationview, how to delete and append items in a list, how to check and uncheck items, how to uncheck all items and reset items to their previous checked status.
-
-I have implemented these concepts to create a Checklist list that can be added to and deleted as well as a corrosponding item list for each checklist that can be added to, deleted and checked and unchecked and checked status reverted.
-
-First milestone video link
