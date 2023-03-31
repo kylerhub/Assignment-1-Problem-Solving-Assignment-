@@ -6,4 +6,6 @@ In the second milestone I learned about datamodels, navigationview, how to delet
 
 I have implemented these concepts to create a Checklist list that can be added to and deleted as well as a corrosponding item list for each checklist that can be added to, deleted and checked and unchecked and checked status reverted.
 
+There is also documentation in MyDOc as well as struct commentary
+
 First milestone video link

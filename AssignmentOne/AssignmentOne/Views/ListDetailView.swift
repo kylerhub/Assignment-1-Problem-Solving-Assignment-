@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//The ListDetailView struct is for the items within each checklist 
+//The ListDetailView struct is the Detail View for the items within each checklist 
 
 struct ListDetailView: View {
 
