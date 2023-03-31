@@ -6,8 +6,12 @@ In the second milestone I learned about datamodels, navigationview, how to delet
 
 I have implemented these concepts to create a Checklist list that can be added to and deleted as well as a corrosponding item list for each checklist that can be added to, deleted and checked and unchecked and checked status reverted.
 
-There is also documentation in MyDOc as well as struct commentary
+There is also documentation in MyDoc as well as struct commentary
 
 Second milestone video link
 
 https://www.kapwing.com/videos/6426468545960401ac289b3f
+
+Git repository
+
+https://github.com/kylerhub/AssignmentOne
