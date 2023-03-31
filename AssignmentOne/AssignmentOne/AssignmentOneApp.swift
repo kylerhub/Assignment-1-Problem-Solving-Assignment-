@@ -8,7 +8,12 @@
 import SwiftUI
 
 @main
+
+//Struct for the app
 struct AssignmentOneApp: App {
+    
+    //uses testChecklists data
+    
     @State var model:DataModel = DataModel(checklists: testChecklists)
     var body: some Scene {
         WindowGroup {

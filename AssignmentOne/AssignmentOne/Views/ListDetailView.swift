@@ -7,11 +7,20 @@
 
 import SwiftUI
 
+//The ListDetailView struct is for the items within each checklist 
+
 struct ListDetailView: View {
 
     @Binding var checklist: Checklist
+    
+    //ability to interact with the checklist, i.e. tick and untick items, as well as an Edit button that allows deleting items
+    
     @State var item = [""]
+    
+    //resetting the check status of all items (i.e. unchecking all items). Ensure that there is an undo function that restores the status of the ticked-off items to originItem, in case the user hit the Reset button by accident.
+
     @State var originItem = [""]
+    
     @State var myTitle = "Checklist"
     
     var body: some View {
