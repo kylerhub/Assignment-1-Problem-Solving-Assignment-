@@ -17,6 +17,7 @@ Embed your list of checklists in a Navigation View with a title (use a suitable 
 Each item needs to be embedded in a Navigation Link that allows the user to get to a view that shows the corresponding checklist (Detail View) by clicking (tapping) on the Master View list item.  
 There needs to be a [+] button that allows to add a new Checklist and an 
 Edit button that puts the list of checklists into edit mode, allowing checklists to be deleted.   
+
 The Detail View should be the same view that you used for for last week's milestone with the addition of the ability to interact with the checklist, i.e. tick and untick items, 
 as well as an Edit button that allows deleting items and 
 resetting the check status of all items (i.e. unchecking all items).  
