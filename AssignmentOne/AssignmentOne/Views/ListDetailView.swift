@@ -41,13 +41,16 @@ struct ListDetailView: View {
             }
             .onDelete { idxx in
                 checklist.items.remove(atOffsets: idxx)
+            }.onMove {indecss, poss in
+                checklist.items.move(fromOffsets: indecss, toOffset: poss)
             }
+            
         }
         .navigationTitle(myTitle)
             .navigationBarItems(
             leading: EditButton(),
             trailing: Button("+") {
-               checklist.items.append(Items(item: "Item", checkedStatus: ""))
+               checklist.items.append(Items(item: "New Item", checkedStatus: ""))
             }
         )
 
