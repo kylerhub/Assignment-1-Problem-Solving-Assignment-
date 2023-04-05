@@ -14,7 +14,7 @@ struct AssignmentOneApp: App {
     
     //uses testChecklists data
     
-    @State var model:DataModel = DataModel(checklists: testChecklists)
+    @State var model:DataModel = DataModel()
     var body: some Scene {
         WindowGroup {
             ContentView(model: $model)

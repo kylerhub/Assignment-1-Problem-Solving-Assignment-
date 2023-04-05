@@ -35,11 +35,8 @@ final class AssignmentOneTests: XCTestCase {
     
     //function for testing the datamodel struct
     func testDataModel() throws {
-        let item1 = Items(item: "Milk", checkedStatus: "unchecked")
-        let item2 = Items(item: "Cheese", checkedStatus: "checked")
-        let checklist1 = Checklist(checklist: "Groceries", items: [item1, item2])
-        let dataModel = DataModel(checklists: [checklist1])
-        
+        let dataModel = DataModel()
         XCTAssert(dataModel.checklists.count == 1)
-        XCTAssert(dataModel.checklists.contains(checklist1))
-    }}
+    }
+    
+}

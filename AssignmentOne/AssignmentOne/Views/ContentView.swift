@@ -24,14 +24,17 @@ struct ContentView: View {
                         }
                     }.onDelete { idx in
                         model.checklists.remove(atOffsets: idx)
+                        model.save()
                     }.onMove {indecs, pos in
                         model.checklists.move(fromOffsets: indecs, toOffset: pos)
+                        model.save()
                     }
                 }
             }.navigationTitle(myTitle)
                 .navigationBarItems(leading: EditButton(),
                                     trailing: Button("+"){
                     model.checklists.append(Checklist(checklist:"New Checklist", items:[]))
+                    model.save()
                 }
                 )
         }
