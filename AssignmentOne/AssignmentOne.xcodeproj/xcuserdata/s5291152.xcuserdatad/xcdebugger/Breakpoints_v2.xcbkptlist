@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AA5F9D88-9972-4439-AD55-A41948FD05FB"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AssignmentOneTests/AssignmentOneTests.swift"
@@ -93,8 +93,8 @@
             filePath = "AssignmentOneTests/AssignmentOneTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "testDataModel()"
             landmarkType = "7">
          </BreakpointContent>

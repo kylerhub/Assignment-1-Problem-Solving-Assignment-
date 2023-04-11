@@ -22,5 +22,3 @@ struct AssignmentOneApp: App {
     }
 }
 
-import SwiftUI
-

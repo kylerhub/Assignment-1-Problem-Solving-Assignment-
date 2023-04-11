@@ -8,36 +8,64 @@ import SwiftUI
 //The ContentView struct is the Master View for the checklists that navigates to the items of each checklist
 
 struct ContentView: View {
-    // model is checklists which can be added and deleted
     @Binding var model: DataModel
-    //property myTitle is the title Checklists for all the checklists
     @State var myTitle = "Checklists"
+    @State var isLoading = true
+    
     var body: some View {
-        
-        NavigationView{
-            VStack{
-                List {
-                    ForEach($model.checklists,id:\.self) {
-                        $p in
-                        NavigationLink(destination: ListDetailView(checklist: $p, item: [""] )){
-                            Text(p.checklist)
+        NavigationView {
+            Group {
+                if isLoading {
+                    ProgressView("Loading...")
+                } else {
+                    VStack {
+                        List {
+                            ForEach($model.checklists, id: \.self) { $p in
+                                NavigationLink(
+                                    destination: ListDetailView(checklist: $p)
+                                ) {
+                                    Text(p.checklist)
+                                }
+                            }
+                            .onDelete { indices in
+                                model.checklists.remove(atOffsets: indices)
+                                model.save()
+                            }
+                            .onMove { source, destination in
+                                model.checklists.move(fromOffsets: source, toOffset: destination)
+                                model.save()
+                            }
                         }
-                    }.onDelete { idx in
-                        model.checklists.remove(atOffsets: idx)
-                        model.save()
-                    }.onMove {indecs, pos in
-                        model.checklists.move(fromOffsets: indecs, toOffset: pos)
-                        model.save()
                     }
                 }
-            }.navigationTitle(myTitle)
-                .navigationBarItems(leading: EditButton(),
-                                    trailing: Button("+"){
-                    model.checklists.append(Checklist(checklist:"New Checklist", items:[]))
+            }
+            .navigationTitle(myTitle)
+            .navigationBarItems(
+                leading:
+                    HStack {
+                        Button(action: {
+                            myTitle = "Checklists"
+                        }) {
+                            Image(systemName: "house.fill")
+                        }
+                        EditButton()
+                    },
+                trailing: Button(action: {
+                    model.checklists.append(Checklist())
                     model.save()
+                }) {
+                    Image(systemName: "plus")
                 }
-                )
+            )
+            .onAppear {
+                isLoading = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    isLoading = false
+                //this bit saves the items
+                model.save()
+                }
+                
+            }
         }
     }
 }
-

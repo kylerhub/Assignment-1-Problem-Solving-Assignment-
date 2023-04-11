@@ -28,19 +28,21 @@ struct ListDetailView: View {
         List{
             ForEach(checklist.items, id: \.self) { pp in
                 HStack {
-                    Text(pp.item)
-                        .onTapGesture {
+                    Text(pp.item).onTapGesture {
                             if(item[0] == "") {
                                 item[0] = "checkmark.circle"
                             } else {
                                 item[0] = ""
                             }
-                        }
+                    }
+                    
                     Image(systemName: item[0])
+                    
                 }
             }
             .onDelete { idxx in
                 checklist.items.remove(atOffsets: idxx)
+
             }.onMove {indecss, poss in
                 checklist.items.move(fromOffsets: indecss, toOffset: poss)
             }
@@ -52,7 +54,8 @@ struct ListDetailView: View {
             trailing: Button("+") {
                checklist.items.append(Items(item: "New Item", checkedStatus: ""))
             }
-        )
+            
+            )
 
         //Reset button
         
@@ -65,5 +68,6 @@ struct ListDetailView: View {
         Button("Undo") {
             item = originItem
         }
+        
     }
 }
