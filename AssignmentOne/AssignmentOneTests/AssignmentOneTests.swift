@@ -11,8 +11,8 @@ final class AssignmentOneTests: XCTestCase {
 
     //function for testing the items struct
     func testItems() throws {
-        let item1 = Items(item: "Milk", checkedStatus: "unchecked")
-        let item2 = Items(item: "Cheese", checkedStatus: "checked")
+        let item1 = Items(item: "Milk", checkedStatus: "unchecked", newCheckedStatus: "")
+        let item2 = Items(item: "Cheese", checkedStatus: "checked", newCheckedStatus: "")
         
         XCTAssert(item1.item == "Milk")
         XCTAssert(item1.checkedStatus == "unchecked")
