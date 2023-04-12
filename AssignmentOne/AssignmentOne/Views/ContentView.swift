@@ -27,7 +27,7 @@ struct ContentView: View {
                                 NavigationLink(
                                     destination: ListDetailView(checklist: $p)
                                 ) {
-                                    Text(p.checklist)
+                                    TextField("", text: $p.checklist)
                                 }
                             }
                             

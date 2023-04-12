@@ -13,8 +13,6 @@ struct ListDetailView: View {
 
     @Binding var checklist: Checklist
     
-    @State var myTitle = "Checklist"
-    
     @State var loading = false // state variable to indicate loading status
     
     var body: some View {
@@ -25,8 +23,12 @@ struct ListDetailView: View {
             } else { // show List if loading is false
                 List{
                     ForEach($checklist.items, id: \.self) { $pp in
+
                         HStack {
-                            Text(pp.item).onTapGesture {
+                            HStack {
+                                TextField("",text: $pp.item)
+                            }
+                            Text("CheckedStatus").onTapGesture {
                                 if(pp.checkedStatus == "") {
                                     pp.checkedStatus = "checkmark.circle"
                                     pp.newCheckedStatus = "checkmark.circle"
@@ -35,9 +37,8 @@ struct ListDetailView: View {
                                     pp.newCheckedStatus = ""
                                 }
                             }
-
+                            
                             Image(systemName: pp.newCheckedStatus)
-
                         }
 
                     }
@@ -50,7 +51,7 @@ struct ListDetailView: View {
                     }
 
                 }
-                .navigationTitle(myTitle)
+                .navigationTitle(checklist.checklist)
                             .navigationBarItems(
                             leading: EditButton(),
                             trailing: Button("+") {
