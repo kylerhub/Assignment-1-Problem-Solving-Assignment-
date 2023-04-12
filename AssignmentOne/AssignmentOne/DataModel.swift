@@ -10,6 +10,7 @@ import Foundation
 struct Items: Hashable, Codable {
     var item: String
     var checkedStatus: String
+    var newCheckedStatus: String
 }
 
 //struct for checklists with all items
@@ -21,7 +22,6 @@ struct Checklist: Hashable, Codable {
         items = []
         checklist = "New checklist"
     }
-    
 }
 
     

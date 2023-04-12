@@ -64,7 +64,6 @@ struct ContentView: View {
                 //this bit saves the items
                 model.save()
                 }
-                
             }
         }
     }

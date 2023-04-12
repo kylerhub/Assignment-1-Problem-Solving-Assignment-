@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//The ListDetailView struct is the Detail View for the items within each checklist 
+//The ListDetailView struct is the Detail View for the items within each checklist
 
 struct ListDetailView: View {
 
@@ -26,19 +26,22 @@ struct ListDetailView: View {
     var body: some View {
         
         List{
-            ForEach(checklist.items, id: \.self) { pp in
+            ForEach($checklist.items, id: \.self) { $pp in
                 HStack {
                     Text(pp.item).onTapGesture {
-                            if(item[0] == "") {
-                                item[0] = "checkmark.circle"
-                            } else {
-                                item[0] = ""
-                            }
+                        if(pp.checkedStatus == "") {
+                            pp.checkedStatus = "checkmark.circle"
+                            pp.newCheckedStatus = "checkmark.circle"
+                        }
+                        else if(pp.newCheckedStatus == "checkmark.circle"){
+                            pp.newCheckedStatus = ""
+                        }
                     }
                     
-                    Image(systemName: item[0])
+                    Image(systemName: pp.newCheckedStatus)
                     
                 }
+                
             }
             .onDelete { idxx in
                 checklist.items.remove(atOffsets: idxx)
@@ -52,22 +55,23 @@ struct ListDetailView: View {
             .navigationBarItems(
             leading: EditButton(),
             trailing: Button("+") {
-               checklist.items.append(Items(item: "New Item", checkedStatus: ""))
+                checklist.items.append(Items(item: "New Item", checkedStatus: "", newCheckedStatus: ""))
             }
             
             )
 
-        //Reset button
-        
-        Button("Reset"){
-            originItem = item
-            if(item[0]=="checkmark.circle")
-            {item[0]=""}
-        }
+        // Reset button
+                Button("Reset") {
+                    //originItem = checklist.items.map { $0.checkedStatus }
+                    for index in checklist.items.indices {
+                        checklist.items[index].newCheckedStatus = ""
+                    }
+                }
 
-        Button("Undo") {
-            item = originItem
-        }
-        
+        // Undo button
+                Button("Undo") {
+                    for index in checklist.items.indices {
+                        checklist.items[index].newCheckedStatus = checklist.items[index].checkedStatus                    }
+                }
     }
 }
