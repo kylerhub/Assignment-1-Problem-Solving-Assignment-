@@ -6,14 +6,14 @@
 //
 import Foundation
 
-//struct for all items with their checkedStatus
+///Struct for all items with their checkedStatus
 struct Items: Hashable, Codable {
     var item: String
     var checkedStatus: String
     var newCheckedStatus: String
 }
 
-//struct for checklists with all items
+///Struct for checklists with all items
 struct Checklist: Hashable, Codable {
     var checklist: String = "<unknown>"
     var items: [Items]
@@ -24,7 +24,8 @@ struct Checklist: Hashable, Codable {
     }
 }
 
-    
+/// Function for JSON for persistence
+
     func getFile() -> URL? {
         let filename = "mychecklists.json"
         let fm = FileManager.default
@@ -34,7 +35,7 @@ struct Checklist: Hashable, Codable {
         return url.appendingPathComponent(filename)
     }
     
-    //struct for all the checklists
+    ///Struct for all the checklists
 struct DataModel: Codable {
     var checklists: [Checklist]
     
@@ -43,6 +44,7 @@ struct DataModel: Codable {
         load()
     }
     
+    /// Function for loading JSON file for persistence
     mutating func load() {
         guard let url = getFile(),
               let data = try? Data(contentsOf: url),
@@ -55,6 +57,7 @@ struct DataModel: Codable {
         self.checklists = datamodel.checklists
     }
     
+    /// Function for saving JSON file for persistence
     func save() {
         
         guard let url = getFile(),

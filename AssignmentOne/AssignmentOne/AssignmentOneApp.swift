@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 
-//Struct for the app
+///Struct for the app
 struct AssignmentOneApp: App {
     
     //uses testChecklists data

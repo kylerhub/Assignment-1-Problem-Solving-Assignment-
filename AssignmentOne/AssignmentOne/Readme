@@ -2,15 +2,13 @@ Assignment 1
 
 Second Milestone
 
-In the second milestone I learned about datamodels, navigationview, how to delete and append items in a list, how to check and uncheck items, how to uncheck all items and reset items to their previous checked status.
+In the third milestone I learned further manipulation including reordering, renaming and deleting with a standard swipe gesture. In addition to that, there are several new concepts that improve app usability like JSON persistence, loading indicators and a home screen app icon. I have also learned how to write additional tests for the modified structs and JSON functions.
 
-I have implemented these concepts to create a Checklist list that can be added to and deleted as well as a corrosponding item list for each checklist that can be added to, deleted and checked and unchecked and checked status reverted.
+I have implemented these concepts to create a Checklist list displays a loading indicator and home icon. From that screen you can add, delete with a swipe gesture, rename before going on to the items in each individual checklist. The items can be manipulated in the same way as the checklists in addition to to checkedStatus functions and also has a loading indicator.
 
-There is also documentation in MyDoc as well as struct commentary
+Third milestone video link
 
-Second milestone video link
 
-https://www.kapwing.com/videos/6426468545960401ac289b3f
 
 Git repository
 

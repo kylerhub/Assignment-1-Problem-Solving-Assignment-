@@ -7,25 +7,26 @@
 
 import SwiftUI
 
-//The ListDetailView struct is the Detail View for the items within each checklist
+///The ListDetailView struct is the Detail View for the items within each checklist
 
 struct ListDetailView: View {
 
     @Binding var checklist: Checklist
     
-    @State var loading = false // state variable to indicate loading status
+    @State var loading = false /// State variable to indicate loading status
     
     var body: some View {
         Group {
-            if loading { // show ProgressView if loading is true
+            if loading { /// Show ProgressView if loading is true
                 ProgressView("Loading...")
                     .progressViewStyle(CircularProgressViewStyle())
-            } else { // show List if loading is false
+            } else { /// Show List if loading is false
                 List{
                     ForEach($checklist.items, id: \.self) { $pp in
 
                         HStack {
                             HStack {
+                                ///Renaming
                                 TextField("",text: $pp.item)
                             }
                             Text("CheckedStatus").onTapGesture {
@@ -42,15 +43,21 @@ struct ListDetailView: View {
                         }
 
                     }
-
+                    
+                    ///Also enable the user to delete an item from the Detail Views through a standard swipe gesture (without needing to press Edit first).
+                    
                     .onDelete { idxx in
                         checklist.items.remove(atOffsets: idxx)
-
+                        
+                    /// Items on the Detail View can be re-ordered when in Edit mode
+                        
                     }.onMove {indecss, poss in
                         checklist.items.move(fromOffsets: indecss, toOffset: poss)
                     }
 
                 }
+                
+                ///Adding
                 .navigationTitle(checklist.checklist)
                             .navigationBarItems(
                             leading: EditButton(),
@@ -61,6 +68,7 @@ struct ListDetailView: View {
                             )
             }
             
+            ///Resetting
             Button("Reset") {
                 for index in checklist.items.indices {
                     checklist.items[index].newCheckedStatus = ""
@@ -74,11 +82,11 @@ struct ListDetailView: View {
             }
         }
         .onAppear {
-            // start loading
+            /// start loading
             loading = true
-            // simulate loading delay
+            /// simulate loading delay
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                // stop loading after delay
+                /// stop loading after delay
                 loading = false
             }
         }
