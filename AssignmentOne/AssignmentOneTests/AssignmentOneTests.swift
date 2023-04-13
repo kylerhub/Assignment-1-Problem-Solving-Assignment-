@@ -29,7 +29,7 @@ final class AssignmentOneTests: XCTestCase {
            XCTAssertEqual(checklist.items.count, 0)
        }
     
-    /// Function for testing getFile() function for JSON persistence \
+    /// Function for testing getFile() function for JSON persistence
     
     func testGetFile() throws {
             let url = getFile()
